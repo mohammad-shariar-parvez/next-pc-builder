@@ -1,0 +1,150 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "E:\\PG-HERO-2\\assignments\\assignment-4\\cow-hub-server\\logs\\winston\\errors\\.bdb5562454e5a2854794750f05fd5bc9eac7abcd-audit.json",
+    "files": [
+        {
+            "date": 1688355694957,
+            "name": "E:\\PG-HERO-2\\assignments\\assignment-4\\cow-hub-server\\logs\\winston\\errors\\mspu-2023-03-07-09-error.log",
+            "hash": "6b8db390b31b0a585bb438425eab6f480bc508e8c015f7bcb7a0de126e37bf1d"
+        },
+        {
+            "date": 1688357252577,
+            "name": "E:\\PG-HERO-2\\assignments\\assignment-4\\cow-hub-server\\logs\\winston\\errors\\mspu-2023-03-07-10-error.log",
+            "hash": "10b30f4f8bf2f9b21cfad1682f540a3804445c0f67658dc10dd962b3a7695545"
+        },
+        {
+            "date": 1688360636863,
+            "name": "E:\\PG-HERO-2\\assignments\\assignment-4\\cow-hub-server\\logs\\winston\\errors\\mspu-2023-03-07-11-error.log",
+            "hash": "a1978aee28637b985c74b8a65608f613ea9c0e8617ca6eaaff089304f83a3ab6"
+        },
+        {
+            "date": 1688366126856,
+            "name": "E:\\PG-HERO-2\\assignments\\assignment-4\\cow-hub-server\\logs\\winston\\errors\\mspu-2023-03-07-12-error.log",
+            "hash": "315fd9b90143b554aa1caf64b589ad437e71e1082d7ec90fa8074e31c37d849f"
+        },
+        {
+            "date": 1688367621034,
+            "name": "E:\\PG-HERO-2\\assignments\\assignment-4\\cow-hub-server\\logs\\winston\\errors\\mspu-2023-03-07-13-error.log",
+            "hash": "e19580519bbef86fd93049604744c8db7441c3b792a07b4dc292c8ab4a3341f7"
+        },
+        {
+            "date": 1688371440350,
+            "name": "E:\\PG-HERO-2\\assignments\\assignment-4\\cow-hub-server\\logs\\winston\\errors\\mspu-2023-03-07-14-error.log",
+            "hash": "0e6350cd07d602b107f4ef028fe655a452edde7ad7e5bee12ac0a7b2e6055e34"
+        },
+        {
+            "date": 1688376927358,
+            "name": "E:\\PG-HERO-2\\assignments\\assignment-4\\cow-hub-server\\logs\\winston\\errors\\mspu-2023-03-07-15-error.log",
+            "hash": "e496f23b3a126771e7347872b13d29ab91f91cb1f5a01a58ad130e27f69141bd"
+        },
+        {
+            "date": 1688378641281,
+            "name": "E:\\PG-HERO-2\\assignments\\assignment-4\\cow-hub-server\\logs\\winston\\errors\\mspu-2023-03-07-16-error.log",
+            "hash": "086acbe5ceac3788da692f941074483fd810a4d52528cf77f369cf8057f2d131"
+        },
+        {
+            "date": 1688383939175,
+            "name": "E:\\PG-HERO-2\\assignments\\assignment-4\\cow-hub-server\\logs\\winston\\errors\\mspu-2023-03-07-17-error.log",
+            "hash": "4289f4c2d70ba9fbd59dc55bb347a3bfc94d561b7c5e03b93f77d53208af6134"
+        },
+        {
+            "date": 1688387427558,
+            "name": "E:\\PG-HERO-2\\assignments\\assignment-4\\cow-hub-server\\logs\\winston\\errors\\mspu-2023-03-07-18-error.log",
+            "hash": "52262af0db76d889fce9bfdb6857a7c53213ed06f03d7d88621bce40db93b230"
+        },
+        {
+            "date": 1688390185124,
+            "name": "E:\\PG-HERO-2\\assignments\\assignment-4\\cow-hub-server\\logs\\winston\\errors\\mspu-2023-03-07-19-error.log",
+            "hash": "8a323643557e7a01f282362dcbc79702c121b672a2387cd6f298c91c882ac84f"
+        },
+        {
+            "date": 1688392905211,
+            "name": "E:\\PG-HERO-2\\assignments\\assignment-4\\cow-hub-server\\logs\\winston\\errors\\mspu-2023-03-07-20-error.log",
+            "hash": "5934707f2bd3a526938c495e2a64e430af09505e90bf09c8c41cbe2b4bb2a2a4"
+        },
+        {
+            "date": 1688396827260,
+            "name": "E:\\PG-HERO-2\\assignments\\assignment-4\\cow-hub-server\\logs\\winston\\errors\\mspu-2023-03-07-21-error.log",
+            "hash": "43e7e6639a20b3754056cff0ae0742ae8598a5c6bc7e77bbb7fa114faca19959"
+        },
+        {
+            "date": 1688400195271,
+            "name": "E:\\PG-HERO-2\\assignments\\assignment-4\\cow-hub-server\\logs\\winston\\errors\\mspu-2023-03-07-22-error.log",
+            "hash": "e1bf4b1b669d3d838aa448a50216fb8ae4770aa9efee370cdc05cf1ced0223fa"
+        },
+        {
+            "date": 1688427054369,
+            "name": "E:\\PG-HERO-2\\assignments\\assignment-4\\cow-hub-server\\logs\\winston\\errors\\mspu-2023-04-07-05-error.log",
+            "hash": "58b0f40c460b7d465ad3c8a5d769120b1692fdfec26a0ac86ff36345903e3a47"
+        },
+        {
+            "date": 1688429505603,
+            "name": "E:\\PG-HERO-2\\assignments\\assignment-4\\cow-hub-server\\logs\\winston\\errors\\mspu-2023-04-07-06-error.log",
+            "hash": "4a798952dc0c79bee15f8ddffee26d47959969f46695faa1769c8af743038e42"
+        },
+        {
+            "date": 1688433184415,
+            "name": "E:\\PG-HERO-2\\assignments\\assignment-4\\cow-hub-server\\logs\\winston\\errors\\mspu-2023-04-07-07-error.log",
+            "hash": "461d4e2ba1a430d21b76b94e26cfd067a12505366f0427eed361d1c89eb56020"
+        },
+        {
+            "date": 1688436077220,
+            "name": "E:\\PG-HERO-2\\assignments\\assignment-4\\cow-hub-server\\logs\\winston\\errors\\mspu-2023-04-07-08-error.log",
+            "hash": "19dc2beb07120e397ba761661accf659add8a4d2aeea1d6176ed4bdbd6f8cde2"
+        },
+        {
+            "date": 1688439900253,
+            "name": "E:\\PG-HERO-2\\assignments\\assignment-4\\cow-hub-server\\logs\\winston\\errors\\mspu-2023-04-07-09-error.log",
+            "hash": "3e07645c31f81dd10f0cd583d1f2327ff524bcf35ddf53b450b061a2b7c8e6d1"
+        },
+        {
+            "date": 1688443434569,
+            "name": "E:\\PG-HERO-2\\assignments\\assignment-4\\cow-hub-server\\logs\\winston\\errors\\mspu-2023-04-07-10-error.log",
+            "hash": "56c593bc8dda8ed841bb033ac7f0f6a5db7eb1c6e98671455f5408410e50be91"
+        },
+        {
+            "date": 1688447235450,
+            "name": "E:\\PG-HERO-2\\assignments\\assignment-4\\cow-hub-server\\logs\\winston\\errors\\mspu-2023-04-07-11-error.log",
+            "hash": "bc8fb74665de223e3058ed27170e7286f0a43f2c75248e43e021984a27521f8b"
+        },
+        {
+            "date": 1688451253683,
+            "name": "E:\\PG-HERO-2\\assignments\\assignment-4\\cow-hub-server\\logs\\winston\\errors\\mspu-2023-04-07-12-error.log",
+            "hash": "57954f0b9ed95dff6c7902962a1eb758576221a5e4d6cc7ad3ec8cab10cdea03"
+        },
+        {
+            "date": 1688454355144,
+            "name": "E:\\PG-HERO-2\\assignments\\assignment-4\\cow-hub-server\\logs\\winston\\errors\\mspu-2023-04-07-13-error.log",
+            "hash": "ccdc3c980414f6fe2a941a833104d981b6b26b885674d06c4349d4e2bb4a6057"
+        },
+        {
+            "date": 1688457658838,
+            "name": "E:\\PG-HERO-2\\assignments\\assignment-4\\cow-hub-server\\logs\\winston\\errors\\mspu-2023-04-07-14-error.log",
+            "hash": "8c8d5a8c309ec4dd162073cd7d122cd362e1b70c7efb436e73db25dad082deb5"
+        },
+        {
+            "date": 1688461489786,
+            "name": "E:\\PG-HERO-2\\assignments\\assignment-4\\cow-hub-server\\logs\\winston\\errors\\mspu-2023-04-07-15-error.log",
+            "hash": "04eb657d146ce63f7f4ad3a6a2887e45af17b4ac700b1ef8bbf34ad9f38fc461"
+        },
+        {
+            "date": 1688465236454,
+            "name": "E:\\PG-HERO-2\\assignments\\assignment-4\\cow-hub-server\\logs\\winston\\errors\\mspu-2023-04-07-16-error.log",
+            "hash": "a8084069d297c1510b791a7782beb14bfc410763bd27ef0a25bbc5d2deeb8fb0"
+        },
+        {
+            "date": 1688470564146,
+            "name": "E:\\PG-HERO-2\\assignments\\assignment-4\\cow-hub-server\\logs\\winston\\errors\\mspu-2023-04-07-17-error.log",
+            "hash": "e8e4d82423776f354e892f58cc62d6efed2ef5878b3a1e5cf26d4c60c0f3abd3"
+        },
+        {
+            "date": 1688472413788,
+            "name": "E:\\PG-HERO-2\\assignments\\assignment-4\\cow-hub-server\\logs\\winston\\errors\\mspu-2023-04-07-18-error.log",
+            "hash": "cdcd7c4a1dee65422fb24c428274ce57816925158ebfde88ba7a31ee326452b7"
+        }
+    ],
+    "hashType": "sha256"
+}

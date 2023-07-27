@@ -1,0 +1,150 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "E:\\PG-HERO-2\\assignments\\assignment-4\\cow-hub-server\\logs\\winston\\successes\\.2054ea41b737f36305a6e408b2eeffad6389045c-audit.json",
+    "files": [
+        {
+            "date": 1688355694951,
+            "name": "E:\\PG-HERO-2\\assignments\\assignment-4\\cow-hub-server\\logs\\winston\\successes\\mspu-2023-03-07-09-success.log",
+            "hash": "452a506d5dcfe7c41e9d69ac062e3bef8579dffa85e4f6d93159b5b9279c4f25"
+        },
+        {
+            "date": 1688357252570,
+            "name": "E:\\PG-HERO-2\\assignments\\assignment-4\\cow-hub-server\\logs\\winston\\successes\\mspu-2023-03-07-10-success.log",
+            "hash": "29b81fb7cbcf18008b2f045ec07fe2e812fedc3e95ec80f940dc491865cbad54"
+        },
+        {
+            "date": 1688360636858,
+            "name": "E:\\PG-HERO-2\\assignments\\assignment-4\\cow-hub-server\\logs\\winston\\successes\\mspu-2023-03-07-11-success.log",
+            "hash": "ea94dc9e99766e69880bc52aba7aabca85df7f7cf1b846131307ac186b9fea3d"
+        },
+        {
+            "date": 1688366126849,
+            "name": "E:\\PG-HERO-2\\assignments\\assignment-4\\cow-hub-server\\logs\\winston\\successes\\mspu-2023-03-07-12-success.log",
+            "hash": "5ab6760dcf24f654b659a289dc69805485b1b316e68753fabbaea2e8cb931bf3"
+        },
+        {
+            "date": 1688367621027,
+            "name": "E:\\PG-HERO-2\\assignments\\assignment-4\\cow-hub-server\\logs\\winston\\successes\\mspu-2023-03-07-13-success.log",
+            "hash": "bfc77393ab03b449dad1b1ead631a23b7691cea9434adedda8d5d99e125e923b"
+        },
+        {
+            "date": 1688371440342,
+            "name": "E:\\PG-HERO-2\\assignments\\assignment-4\\cow-hub-server\\logs\\winston\\successes\\mspu-2023-03-07-14-success.log",
+            "hash": "113f75e5a345e97879c1452dd77be31c9244d3c2d2348ffe5fce80090b82342c"
+        },
+        {
+            "date": 1688376927344,
+            "name": "E:\\PG-HERO-2\\assignments\\assignment-4\\cow-hub-server\\logs\\winston\\successes\\mspu-2023-03-07-15-success.log",
+            "hash": "bdba3b4617775d214ebdacc793274cebdb2fc9ff2ddeefac2488b284dd73cff1"
+        },
+        {
+            "date": 1688378641272,
+            "name": "E:\\PG-HERO-2\\assignments\\assignment-4\\cow-hub-server\\logs\\winston\\successes\\mspu-2023-03-07-16-success.log",
+            "hash": "e56ce545ce09d5a607f905d13d2d803a0648d8f84dc7c0a789744fffc9b49239"
+        },
+        {
+            "date": 1688383939169,
+            "name": "E:\\PG-HERO-2\\assignments\\assignment-4\\cow-hub-server\\logs\\winston\\successes\\mspu-2023-03-07-17-success.log",
+            "hash": "93392a2f7345c9a82771538e44661c285d0ad904dbc8dcc094309a161dfcc77d"
+        },
+        {
+            "date": 1688387427552,
+            "name": "E:\\PG-HERO-2\\assignments\\assignment-4\\cow-hub-server\\logs\\winston\\successes\\mspu-2023-03-07-18-success.log",
+            "hash": "1814aaf35645d3b17f6695ffab08922605a3da0044661157ad88252901cd2d45"
+        },
+        {
+            "date": 1688390185117,
+            "name": "E:\\PG-HERO-2\\assignments\\assignment-4\\cow-hub-server\\logs\\winston\\successes\\mspu-2023-03-07-19-success.log",
+            "hash": "4ba5adbb68e12f595bd7af1d10a1a25cce2bc0958160810b57555b6d7a445c15"
+        },
+        {
+            "date": 1688392905201,
+            "name": "E:\\PG-HERO-2\\assignments\\assignment-4\\cow-hub-server\\logs\\winston\\successes\\mspu-2023-03-07-20-success.log",
+            "hash": "a921413967eeff50f059a07e88612c6492951c9c13ec7e95daa0ae6bda5ffd39"
+        },
+        {
+            "date": 1688396827252,
+            "name": "E:\\PG-HERO-2\\assignments\\assignment-4\\cow-hub-server\\logs\\winston\\successes\\mspu-2023-03-07-21-success.log",
+            "hash": "95bc480d21230e2b4a7560386ed14cfbda1e1ea66e28feb52a8dede828a24b10"
+        },
+        {
+            "date": 1688400195265,
+            "name": "E:\\PG-HERO-2\\assignments\\assignment-4\\cow-hub-server\\logs\\winston\\successes\\mspu-2023-03-07-22-success.log",
+            "hash": "957a168044fd504a7cebfd5d4be13876e713990ce27b0af700f9fafc14ba19a2"
+        },
+        {
+            "date": 1688427054350,
+            "name": "E:\\PG-HERO-2\\assignments\\assignment-4\\cow-hub-server\\logs\\winston\\successes\\mspu-2023-04-07-05-success.log",
+            "hash": "90ddf1fc47c1d70b088219fe33d30a2d356c7564ad474bd78b78e617f491ae49"
+        },
+        {
+            "date": 1688429505598,
+            "name": "E:\\PG-HERO-2\\assignments\\assignment-4\\cow-hub-server\\logs\\winston\\successes\\mspu-2023-04-07-06-success.log",
+            "hash": "195c9614f560775d9ca574bf104def4495550d7da99c2a33c627d0e4fd039621"
+        },
+        {
+            "date": 1688433184408,
+            "name": "E:\\PG-HERO-2\\assignments\\assignment-4\\cow-hub-server\\logs\\winston\\successes\\mspu-2023-04-07-07-success.log",
+            "hash": "cd8fb4e0f1c97d99f23de9fac107ab72becde4b664456a9bc4053b51f0388b67"
+        },
+        {
+            "date": 1688436077210,
+            "name": "E:\\PG-HERO-2\\assignments\\assignment-4\\cow-hub-server\\logs\\winston\\successes\\mspu-2023-04-07-08-success.log",
+            "hash": "6eaab9245da075027b6bc3b27fafeac4e502fa969ae87b96846cbc5600b58d33"
+        },
+        {
+            "date": 1688439900242,
+            "name": "E:\\PG-HERO-2\\assignments\\assignment-4\\cow-hub-server\\logs\\winston\\successes\\mspu-2023-04-07-09-success.log",
+            "hash": "744e18c43508db040aac226ff175ecdaf44fd5817df9d911798808d967b3cde3"
+        },
+        {
+            "date": 1688443434564,
+            "name": "E:\\PG-HERO-2\\assignments\\assignment-4\\cow-hub-server\\logs\\winston\\successes\\mspu-2023-04-07-10-success.log",
+            "hash": "2652724c4726113e26f40bdb0d2c4c030dc39f504cc739e5d7f447fb93efb0f8"
+        },
+        {
+            "date": 1688447235443,
+            "name": "E:\\PG-HERO-2\\assignments\\assignment-4\\cow-hub-server\\logs\\winston\\successes\\mspu-2023-04-07-11-success.log",
+            "hash": "c8e375ed89c8f9ee5f2960b863036b3055a94d847f89e7f0a56f8076ae562df7"
+        },
+        {
+            "date": 1688451253678,
+            "name": "E:\\PG-HERO-2\\assignments\\assignment-4\\cow-hub-server\\logs\\winston\\successes\\mspu-2023-04-07-12-success.log",
+            "hash": "aec75b49d826f9216c534e1a6f8b17469fe8d0b900f7e84053a9feda9a70a032"
+        },
+        {
+            "date": 1688454355138,
+            "name": "E:\\PG-HERO-2\\assignments\\assignment-4\\cow-hub-server\\logs\\winston\\successes\\mspu-2023-04-07-13-success.log",
+            "hash": "9e60b3cec6f96c230e312bb1eb24ea9d81961d2855f0fd69899e7b511576d3ef"
+        },
+        {
+            "date": 1688457658822,
+            "name": "E:\\PG-HERO-2\\assignments\\assignment-4\\cow-hub-server\\logs\\winston\\successes\\mspu-2023-04-07-14-success.log",
+            "hash": "2a43e6ee6f6042a44be2bdc4abc74385e8e9d11c518b9b530da5692a0692c751"
+        },
+        {
+            "date": 1688461489780,
+            "name": "E:\\PG-HERO-2\\assignments\\assignment-4\\cow-hub-server\\logs\\winston\\successes\\mspu-2023-04-07-15-success.log",
+            "hash": "881551febe1cdef98afd0e64897829ff184bee7fc0c3422cdfeef2cc12a96505"
+        },
+        {
+            "date": 1688465236447,
+            "name": "E:\\PG-HERO-2\\assignments\\assignment-4\\cow-hub-server\\logs\\winston\\successes\\mspu-2023-04-07-16-success.log",
+            "hash": "7ef645ef9aca1a06b21c8681f76587aeb41c80a07e5db201452ad8af6d91a4bb"
+        },
+        {
+            "date": 1688470564140,
+            "name": "E:\\PG-HERO-2\\assignments\\assignment-4\\cow-hub-server\\logs\\winston\\successes\\mspu-2023-04-07-17-success.log",
+            "hash": "fbab74f11eaf3295f3212a3c350981f9dd873680ee69947d7d6e7d2c4e1309e5"
+        },
+        {
+            "date": 1688472413779,
+            "name": "E:\\PG-HERO-2\\assignments\\assignment-4\\cow-hub-server\\logs\\winston\\successes\\mspu-2023-04-07-18-success.log",
+            "hash": "4beee627aeb58bad569d522346ec6e920da4fc985c2022933ee989d42a38594e"
+        }
+    ],
+    "hashType": "sha256"
+}
