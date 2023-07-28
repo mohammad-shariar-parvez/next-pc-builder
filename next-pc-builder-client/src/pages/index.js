@@ -7,7 +7,7 @@ import AllProducts from '@/components/UI/AllProducts';
 
 
 const HomePage = ({ allProducts }) => {
-  console.log("ALL PRODUTS IS ", allProducts);
+
   return (
     <>
       <Head>

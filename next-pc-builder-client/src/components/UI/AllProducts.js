@@ -33,7 +33,7 @@ const AllProducts = ({ allProducts }) => {
           md: 24,
           lg: 32,
         }]}
-        align="middle"
+        justify="center"
       >
         {allProducts?.map((product) => (
           <Col key={product.id} className="gutter-row" lg={{
@@ -82,7 +82,25 @@ const AllProducts = ({ allProducts }) => {
                 }}
               >
                 <span>
-                  <CalendarOutlined /> {product?.individualRating}
+                  <CalendarOutlined /> {product?.price} BDT
+                </span>
+                <span>
+                  <CalendarOutlined /> {product?.category}
+                </span>
+
+              </p>
+              <p
+                style={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                  width: "100%",
+                  color: "gray",
+                  margin: "10px 0px",
+                  fontSize: "12px",
+                }}
+              >
+                <span>
+                  <CalendarOutlined /> {product?.status}
                 </span>
                 <span>
                   <CalendarOutlined /> {product?.averageRating}
@@ -95,7 +113,7 @@ const AllProducts = ({ allProducts }) => {
                   ? news?.description.slice(0, 70) + "..."
                   : news?.description}
               </p> */}
-              <Link href={`/news/${product?.id}`}>
+              <Link href={`/products/${product?.id}`}>
                 <p
                   style={{
                     fontSize: "15px",
