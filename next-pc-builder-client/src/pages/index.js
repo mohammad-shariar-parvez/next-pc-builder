@@ -3,9 +3,11 @@ import Image from 'next/image';
 import { Inter } from 'next/font/google';
 import RootLayout from '@/components/Layouts/RootLayout';
 import Banner from '@/components/UI/Banner';
+import AllProducts from '@/components/UI/AllProducts';
 
 
-const HomePage = () => {
+const HomePage = ({ allProducts }) => {
+  console.log("ALL PRODUTS IS ", allProducts);
   return (
     <>
       <Head>
@@ -16,6 +18,10 @@ const HomePage = () => {
       </Head>
       <main >
         <Banner />
+        <div style={{ padding: "20px" }}>
+          <AllProducts allProducts={allProducts} />
+
+        </div>
       </main>
     </>
   );
@@ -25,4 +31,19 @@ export default HomePage;
 
 HomePage.getLayout = function getLayout(page) {
   return <RootLayout>{page}</RootLayout>;
+};
+
+
+export const getStaticProps = async () => {
+  // const res = await fetch("http://localhost:3000/api/news"); 
+  const res = await fetch("http://localhost:5001/api/v1/products/");
+  const data = await res.json();
+  console.log("DATAAA", data);
+  return {
+    props: {
+      allProducts: data.data,
+      // allNews: data.data, // When using internal API connected with mongoDB
+    },
+
+  };
 };

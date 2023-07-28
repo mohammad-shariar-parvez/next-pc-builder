@@ -88,7 +88,7 @@ const RootLayout = ({ children }) => {
 						fontSize: "28px",
 					}}
 				>
-					PH-NEWS PORTAL
+					MSP PC BUILDER
 				</h2>
 				<p className={styles.social_icons}>
 					<Link href="https://web.facebook.com/groups/programmingherocommunity">
@@ -104,7 +104,7 @@ const RootLayout = ({ children }) => {
 						<LinkedinFilled />
 					</Link>
 				</p>
-				News Portal ©2023 Created by Programming Hero
+				MSP PC Builder ©2023 Created by MSP Web Solutions
 			</Footer>
 		</Layout>
 	);
