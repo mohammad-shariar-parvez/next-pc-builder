@@ -168,7 +168,7 @@ export const getStaticPaths = async () => {
 	const paths = products?.data?.map((product) => ({
 		params: { productId: product.id.toString() },
 	}));
-	console.log("PPAATTHH IS ----", paths);
+	// console.log("PPAATTHH IS ----", paths);
 
 	return { paths, fallback: false };
 
@@ -177,10 +177,11 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps = async (context) => {
 	const { params } = context;
+	console.log("cONFURION---------", params);
 
 	const res = await fetch(`http://localhost:5001/api/v1/products/${params.productId}`);
 	const data = await res?.json();
-	console.log("REAL ", data);
+	// console.log("REAL ", data);
 	return {
 		props: {
 			product: data.data,

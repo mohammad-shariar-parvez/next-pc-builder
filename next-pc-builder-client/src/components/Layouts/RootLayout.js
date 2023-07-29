@@ -7,7 +7,7 @@ import {
 	GoogleSquareFilled,
 	TwitterSquareFilled,
 } from "@ant-design/icons";
-import { Layout, Menu } from "antd";
+import { Button, Layout, Menu } from "antd";
 const { Header, Content, Footer } = Layout;
 import styles from "@/styles/Home.module.css";
 import Link from "next/link";
@@ -53,19 +53,16 @@ const RootLayout = ({ children }) => {
 						</items>
 					</Link>
 
-					<Link href="/about">
-						<items
-							style={{
-								marginLeft: "15px",
-							}}
-						>
-							<UserOutlined />
-							About Us
-						</items>
+					<Link href="/build-pc">
+						<Button style={{
+							marginLeft: "15px",
+						}} ghost>BUILD PC</Button>
+
 					</Link>
 
 				</Menu>
 			</Header>
+			<div style={{ paddingBottom: "50px" }}></div>
 
 			<Content
 				style={{

@@ -4,6 +4,7 @@ import { Inter } from 'next/font/google';
 import RootLayout from '@/components/Layouts/RootLayout';
 import Banner from '@/components/UI/Banner';
 import AllProducts from '@/components/UI/AllProducts';
+import Featured from '@/components/UI/Featured';
 
 
 const HomePage = ({ allProducts }) => {
@@ -20,8 +21,8 @@ const HomePage = ({ allProducts }) => {
         <Banner />
         <div style={{ padding: "20px" }}>
           <AllProducts allProducts={allProducts} />
-
         </div>
+        <Featured />
       </main>
     </>
   );
@@ -38,7 +39,7 @@ export const getStaticProps = async () => {
   // const res = await fetch("http://localhost:3000/api/news"); 
   const res = await fetch("http://localhost:5001/api/v1/products/");
   const data = await res.json();
-  console.log("DATAAA", data);
+  // console.log("DATAAA", data);
   return {
     props: {
       allProducts: data.data,
