@@ -7,8 +7,10 @@ import {
   ProfileOutlined,
 } from "@ant-design/icons";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 const AllProducts = ({ allProducts }) => {
+  const router = useRouter();
   const { Meta } = Card;
   return (
     <>

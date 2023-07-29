@@ -7,27 +7,27 @@ import Image from 'next/image';
 const data = [
 	{
 		title: 'CPU',
-		query: '/categories/CPU'
+		query: '/choose/CPU'
 	},
 	{
 		title: 'Motherboard',
-		query: '/categories/Motherboard'
+		query: '/choose/Motherboard'
 	},
 	{
 		title: 'RAM',
-		query: '/categories/RAM'
+		query: '/choose/RAM'
 	},
 	{
 		title: 'Power Supply Unit',
-		query: '/categories/Power Supply Unit'
+		query: '/choose/Power Supply Unit'
 	},
 	{
 		title: 'Storage Device',
-		query: '/categories/Storage Device'
+		query: '/choose/Storage Device'
 	},
 	{
 		title: 'Monitor',
-		query: '/categories/Monitor'
+		query: '/choose/Monitor'
 	},
 
 ];

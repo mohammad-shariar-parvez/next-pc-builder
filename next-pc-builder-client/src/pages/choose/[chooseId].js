@@ -2,7 +2,7 @@ import RootLayout from '@/components/Layouts/RootLayout';
 import AllProducts from '@/components/UI/AllProducts';
 import React from 'react';
 
-const CategoeisedProduct = ({ product }) => {
+const ChooseProduct = ({ product }) => {
 	console.log("PRODUCT ID", product);
 	return (
 		<div style={{ padding: "20px" }}><h1>
@@ -18,7 +18,7 @@ const CategoeisedProduct = ({ product }) => {
 
 export default CategoeisedProduct;
 
-CategoeisedProduct.getLayout = function getLayout(page) {
+ChooseProduct.getLayout = function getLayout(page) {
 	return <RootLayout>{page}</RootLayout>;
 };
 
@@ -28,7 +28,7 @@ export const getStaticPaths = async () => {
 	const products = await res.json();
 	// console.log("PPAATTHH IS ----", products);
 	const paths = products?.data?.map((product) => ({
-		params: { categoryId: product?.category.toString() },
+		params: { chooseId: product?.category.toString() },
 	}));
 
 	return { paths, fallback: false };
@@ -39,7 +39,7 @@ export const getStaticProps = async (context) => {
 	const { params } = context;
 	// console.log("cONFURION---------", params);
 
-	const res = await fetch(`http://localhost:5001/api/v1/products/?&category=${params.categoryId}`);
+	const res = await fetch(`http://localhost:5001/api/v1/products/?&category=${params.chooseId}`);
 	const data = await res?.json();
 	return {
 		props: {
