@@ -123,3 +123,16 @@ BuildPc.getLayout = function getLayout(page) {
 	return <RootLayout>{page}</RootLayout>;
 };
 export default BuildPc;
+
+
+// export async function getServerSideProps() {
+// 	// Here you can initialize an empty initial state if needed,
+// 	// or any other data you want to pass to the page props.
+// 	const initialState = {};
+
+// 	return {
+// 		props: {
+// 			initialState,
+// 		},
+// 	};
+// }

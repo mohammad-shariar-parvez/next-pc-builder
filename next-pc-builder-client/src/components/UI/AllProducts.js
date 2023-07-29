@@ -120,7 +120,7 @@ const AllProducts = ({ allProducts }) => {
               </p> */}
 
 
-              (
+
               <Link href={`/products/${product?.id}`}>
                 <p
                   style={{
@@ -138,7 +138,7 @@ const AllProducts = ({ allProducts }) => {
                   More Info <ArrowRightOutlined />
                 </p>
               </Link>
-              )
+
 
             </Card>
           </Col>
