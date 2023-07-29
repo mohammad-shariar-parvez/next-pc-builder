@@ -6,9 +6,9 @@ const ChooseProduct = ({ product }) => {
 	console.log("PRODUCT ID", product);
 	return (
 		<div style={{ padding: "20px" }}><h1>
-			This is Product catogory
+			This is Product CHOOOOSE
 
-			<AllProducts allProducts={product} />
+			<AllProducts allProducts={product} add={true} />
 
 
 
@@ -16,7 +16,7 @@ const ChooseProduct = ({ product }) => {
 	);
 };
 
-export default CategoeisedProduct;
+export default ChooseProduct;
 
 ChooseProduct.getLayout = function getLayout(page) {
 	return <RootLayout>{page}</RootLayout>;

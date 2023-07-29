@@ -8,10 +8,24 @@ import {
 } from "@ant-design/icons";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { useDispatch, useSelector } from "react-redux";
 
-const AllProducts = ({ allProducts }) => {
+const AllProducts = ({ allProducts, add }) => {
+  const pcBuild = useSelector((state) => state.pcBuild);
+  const dispatch = useDispatch();
+  console.log("STOREEEE", pcBuild);
+
   const router = useRouter();
   const { Meta } = Card;
+
+
+  const addPcHandler = (product) => {
+    const pro = product.category;
+    console.log("SINGLE PRODUCT", { pro: product.category });
+    // router.push(`/build-pc`);
+
+  };
+
   return (
     <>
       <h1
@@ -115,23 +129,47 @@ const AllProducts = ({ allProducts }) => {
                   ? news?.description.slice(0, 70) + "..."
                   : news?.description}
               </p> */}
-              <Link href={`/products/${product?.id}`}>
-                <p
-                  style={{
-                    fontSize: "15px",
-                    marginTop: "20px",
-                    backgroundColor: "black",
-                    color: "white",
-                    width: "100%",
-                    padding: "2px 5px ",
-                    fontWeight: "300",
-                    letterSpacing: "3px",
-                    textAlign: "center",
-                  }}
-                >
-                  More Info <ArrowRightOutlined />
-                </p>
-              </Link>
+
+              {
+                add ? (
+                  <p
+                    onClick={() => addPcHandler(product)}
+                    style={{
+                      fontSize: "15px",
+                      marginTop: "20px",
+                      backgroundColor: "black",
+                      color: "white",
+                      width: "100%",
+                      padding: "2px 5px ",
+                      fontWeight: "300",
+                      letterSpacing: "3px",
+                      textAlign: "center",
+                    }}
+                  >
+                    ADD <ArrowRightOutlined />
+                  </p>
+                )
+                  :
+                  (
+                    <Link href={`/products/${product?.id}`}>
+                      <p
+                        style={{
+                          fontSize: "15px",
+                          marginTop: "20px",
+                          backgroundColor: "black",
+                          color: "white",
+                          width: "100%",
+                          padding: "2px 5px ",
+                          fontWeight: "300",
+                          letterSpacing: "3px",
+                          textAlign: "center",
+                        }}
+                      >
+                        More Info <ArrowRightOutlined />
+                      </p>
+                    </Link>
+                  )
+              }
             </Card>
           </Col>
         ))}
