@@ -3,11 +3,14 @@ import { Card } from 'antd';
 import Link from 'next/link';
 const gridStyle = {
 	width: '33.32%',
+	height: "40px",
 	textAlign: 'center',
-	position: 'relative'
+	position: 'relative',
+	height: "150px",
+	fontSize: "20px"
 };
 const Featured = () => (
-	<section style={{ padding: "16px" }}>
+	<section style={{ padding: "80px 16px", maxWidth: "1300px", margin: "auto", }}>
 		<h1
 			style={{
 				textAlign: "center",
@@ -17,7 +20,7 @@ const Featured = () => (
 		>
 			FEATURED PRODUCTS
 		</h1>
-		<Card style={{ background: "#b8c0fe" }} >
+		<Card style={{ height: "300px" }} >
 			<Card.Grid style={gridStyle}>
 				<Link href={'/categories/CPU'} className='featureCard'>
 					CPU

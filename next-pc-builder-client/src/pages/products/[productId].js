@@ -1,20 +1,22 @@
 /* eslint-disable react/jsx-key */
-import { Col, Divider, Row, Space, Tag } from "antd";
+import { Avatar, Col, Divider, List, Row, Space, Tag } from "antd";
 import {
 	UserOutlined,
 	CalendarOutlined,
 	CommentOutlined,
 	ProfileOutlined,
+	StarOutlined,
+	MoneyCollectOutlined,
+	StockOutlined
 } from "@ant-design/icons";
 import Image from "next/image";
 import RootLayout from "@/components/Layouts/RootLayout";
 
 const ProductDetailPage = ({ product }) => {
+	console.log(product);
 	return (
 
-
-
-		<div style={{ padding: "16px" }}>
+		<div style={{ padding: "16px", maxWidth: "1300px", margin: "auto", }}>
 			<Row justify="center" style={{ marginTop: "80px", alignItems: "center", paddingTop: "0px", }} gutter={[{
 				xs: 8,
 				sm: 16,
@@ -26,8 +28,8 @@ const ProductDetailPage = ({ product }) => {
 				md: 24,
 				lg: 32,
 			}]}>
-				<Col md={6} lg={10}>
-					<div style={{ width: "100vw", height: "300px" }} >
+				<Col md={6} lg={12}>
+					<div style={{ width: "100vw", height: "300px", padding: "16px" }} >
 						<Image
 							alt="example"
 							src={product?.image}
@@ -36,7 +38,7 @@ const ProductDetailPage = ({ product }) => {
 						/>
 					</div>
 				</Col>
-				<Col md={6} lg={10} >
+				<Col md={6} lg={12} >
 					<h1 style={{ fontSize: "30px" }}>{product?.productName}</h1>
 					<span
 						style={{
@@ -60,6 +62,7 @@ const ProductDetailPage = ({ product }) => {
 					<p
 						style={{
 							display: "flex",
+							flex: "start",
 							justifyContent: "space-between",
 							width: "100%",
 							color: "gray",
@@ -68,10 +71,10 @@ const ProductDetailPage = ({ product }) => {
 						}}
 					>
 						<span>
-							<CalendarOutlined /> {product?.status}
+							<StockOutlined /> {product?.status}
 						</span>
 						<span>
-							{product?.price} BDT
+							<MoneyCollectOutlined />{product?.price} BDT
 						</span>
 						<span>
 							<ProfileOutlined /> {product?.category}
@@ -88,21 +91,19 @@ const ProductDetailPage = ({ product }) => {
 						}}
 					>
 						<span>
-							<CalendarOutlined /> {product?.individualRating}
+							PR: <StarOutlined /> {product?.individualRating}
 						</span>
+
 						<span>
-							{product?.status}
-						</span>
-						<span>
-							<ProfileOutlined /> {product?.averageRating}
+							AR: <StarOutlined /> {product?.averageRating}
 						</span>
 					</p>
 					<div
 						className="line"
 						style={{
-							height: "2px",
+							height: "0px",
 							margin: "20px 0",
-							background: "#000",
+							background: "gray",
 							width: "100%",
 						}}
 					></div>
@@ -118,30 +119,41 @@ const ProductDetailPage = ({ product }) => {
 					<div
 						className="line"
 						style={{
-							height: "1px",
+							height: "0.5px",
 							margin: "20px 0",
-							background: "#000",
+							background: "gray",
 							width: "100%",
 						}}
 					></div>
 
 				</Col>
-				<Col md={6} lg={20} style={{ paddingLeft: "20px" }}>
-					<p style={{ fontWeight: "lighter" }}>
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur quo enim doloribus quas veritatis. Praesentium dolore culpa eligendi modi labore. Totam laudantium earum incidunt facere dolorum, quidem nemo minima excepturi veniam? Suscipit voluptatem magni vel laudantium sunt reprehenderit, nihil dolores.
+				<Col md={6} lg={24} >
+					<p >
+						{product.description
+						}
 					</p>
 				</Col>
 
 			</Row>
-			<Row justify="center" style={{ marginTop: "40px", paddingTop: "0px", }} >
+			<Row justify="start" style={{ marginTop: "40px", paddingTop: "0px", }} >
 				<Col md={6} lg={20} >
 					<h1>User Reviews</h1>
+
 					{
-						product.reviews.map(review => (
-							<div  >
-								<Divider style={{ margin: "10px 0px" }} orientation="left" orientationMargin="0">User</Divider>
-								<p style={{ fontWeight: "lighter" }}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus labore dolorum dicta at beatae dolorem alias ab quas sit aspernatur ut debitis, rem, laborum fugit sapiente, laudantium necessitatibus consectetur cum!</p>
-							</div>
+						product.reviews.map((review, index) => (
+							<List
+							>
+								<List.Item>
+									<List.Item.Meta
+										avatar={<Avatar src={`https://xsgames.co/randomusers/avatar.php?g=pixel&key=${index}`} />}
+										title={<a href="https://ant.design">HEllo</a>}
+										description={review}
+									/>
+								</List.Item>
+								<Divider style={{ margin: "0px 0px" }} ></Divider>
+
+
+							</List>
 						))
 					}
 

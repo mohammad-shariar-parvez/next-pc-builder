@@ -19,9 +19,7 @@ const HomePage = ({ allProducts }) => {
       </Head>
       <main >
         <Banner />
-        <div style={{ padding: "20px" }}>
-          <AllProducts allProducts={allProducts} />
-        </div>
+        <AllProducts allProducts={allProducts} />
         <Featured />
       </main>
     </>

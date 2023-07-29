@@ -16,7 +16,7 @@ const AllProducts = ({ allProducts }) => {
 
 
   return (
-    <>
+    <section style={{ maxWidth: "1250px", margin: "auto", paddingTop: "30px" }}>
       <h1
         style={{
           textAlign: "center",
@@ -24,7 +24,7 @@ const AllProducts = ({ allProducts }) => {
           margin: "30px 0px",
         }}
       >
-        #TODAY HIGHLIGHT
+        TOP PRODUCTS
       </h1>
       <Row
         gutter={[{
@@ -40,10 +40,11 @@ const AllProducts = ({ allProducts }) => {
         }]}
         justify="center"
       >
-        {allProducts?.map((product) => (
-          <Col key={product.id} className="gutter-row" lg={{
-            span: 7,
-          }}
+        {allProducts?.slice(0, 6).map((product) => (
+          <Col key={product.id} className="gutter-row" style={{ padding: "1px 16px" }}
+            lg={{
+              span: 8,
+            }}
             md={{
               span: 24,
             }}
@@ -54,13 +55,14 @@ const AllProducts = ({ allProducts }) => {
               span: 24,
             }}>
             <Card
+
               hoverable
               cover={
                 <Image
                   src={product?.image}
                   width={300}
                   height={200}
-
+                  // style={{ padding: "16px" }}
                   alt="news image"
                 />
               }
@@ -144,7 +146,7 @@ const AllProducts = ({ allProducts }) => {
           </Col>
         ))}
       </Row>
-    </>
+    </section>
   );
 };
 

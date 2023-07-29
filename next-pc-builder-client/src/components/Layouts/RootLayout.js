@@ -112,7 +112,7 @@ const RootLayout = ({ children }) => {
 						}}
 
 					>
-						<a onClick={(e) => e.preventDefault()}>
+						<a style={{ fontSize: "16px" }} onClick={(e) => e.preventDefault()}>
 							<Space>
 								Categories
 								<DownOutlined />
@@ -124,22 +124,31 @@ const RootLayout = ({ children }) => {
 					<Link href="/build-pc">
 						<Button style={{
 							marginLeft: "15px",
+							fontSize: "16px"
 						}} ghost>BUILD PC</Button>
 
 					</Link>
-					{!session?.user ? (<Link style={{ textDecoration: "none", color: "white" }} href="/login">
-						<items>Login</items>
+					{!session?.user ? (<Link style={{ textDecoration: "none", color: "white", fontSize: "16px" }} href="/login">
+						<Button style={{
+							marginLeft: "15px",
+							fontSize: "16px"
+						}} onClick={() => signOut()} type="primary" ghost>
+							LOGIN
+						</Button>
 					</Link>)
 						:
 						(<items>
-							<Button onClick={() => signOut()} type="primary" danger>
-								Logout
+							<Button style={{
+								marginLeft: "15px",
+								fontSize: "16px"
+							}} onClick={() => signOut()} type="primary" danger ghost>
+								LOGOUT
 							</Button>
 						</items>)}
 
 				</Menu>
 			</Header>
-			<div style={{ paddingBottom: "50px" }}></div>
+			<div style={{ paddingBottom: "19px" }}></div>
 
 			<Content
 				style={{
@@ -154,6 +163,7 @@ const RootLayout = ({ children }) => {
 			<Footer
 				style={{
 					textAlign: "center",
+					marginTop: "40px"
 				}}
 			>
 				<div className={styles.line}></div>
