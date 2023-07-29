@@ -17,9 +17,10 @@ const pcBuildSlice = createSlice({
 	initialState,
 	reducers: {
 		addToPcBuild: (state, action) => {
-
-			state = { ...state, ...action.payload };
-
+			console.log("ACTION US", action.payload);
+			console.log("ACTION output", { ...state, ...action.payload });
+			// state = { ...state, ...action.payload };
+			Object.assign(state, action.payload);
 		},
 
 	},

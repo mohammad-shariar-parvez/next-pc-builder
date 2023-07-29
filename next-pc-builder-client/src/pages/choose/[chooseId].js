@@ -1,18 +1,20 @@
 import RootLayout from '@/components/Layouts/RootLayout';
 import AllProducts from '@/components/UI/AllProducts';
+import ProductsSelection from '@/components/UI/ProductsSelection';
 import React from 'react';
 
 const ChooseProduct = ({ product }) => {
 	console.log("PRODUCT ID", product);
 	return (
-		<div style={{ padding: "20px" }}><h1>
+		<div style={{ padding: "20px" }}>
 			This is Product CHOOOOSE
 
-			<AllProducts allProducts={product} add={true} />
+
+			<ProductsSelection allProducts={product} />
 
 
 
-		</h1></div>
+		</div>
 	);
 };
 

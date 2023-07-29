@@ -3,28 +3,17 @@ import Image from "next/image";
 import {
   ArrowRightOutlined,
   CalendarOutlined,
-  CommentOutlined,
-  ProfileOutlined,
 } from "@ant-design/icons";
 import Link from "next/link";
-import { useRouter } from "next/router";
-import { useDispatch, useSelector } from "react-redux";
 
-const AllProducts = ({ allProducts, add }) => {
-  const pcBuild = useSelector((state) => state.pcBuild);
-  const dispatch = useDispatch();
-  console.log("STOREEEE", pcBuild);
 
-  const router = useRouter();
+const AllProducts = ({ allProducts }) => {
+
+
   const { Meta } = Card;
 
 
-  const addPcHandler = (product) => {
-    const pro = product.category;
-    console.log("SINGLE PRODUCT", { pro: product.category });
-    // router.push(`/build-pc`);
 
-  };
 
   return (
     <>
@@ -130,46 +119,27 @@ const AllProducts = ({ allProducts, add }) => {
                   : news?.description}
               </p> */}
 
-              {
-                add ? (
-                  <p
-                    onClick={() => addPcHandler(product)}
-                    style={{
-                      fontSize: "15px",
-                      marginTop: "20px",
-                      backgroundColor: "black",
-                      color: "white",
-                      width: "100%",
-                      padding: "2px 5px ",
-                      fontWeight: "300",
-                      letterSpacing: "3px",
-                      textAlign: "center",
-                    }}
-                  >
-                    ADD <ArrowRightOutlined />
-                  </p>
-                )
-                  :
-                  (
-                    <Link href={`/products/${product?.id}`}>
-                      <p
-                        style={{
-                          fontSize: "15px",
-                          marginTop: "20px",
-                          backgroundColor: "black",
-                          color: "white",
-                          width: "100%",
-                          padding: "2px 5px ",
-                          fontWeight: "300",
-                          letterSpacing: "3px",
-                          textAlign: "center",
-                        }}
-                      >
-                        More Info <ArrowRightOutlined />
-                      </p>
-                    </Link>
-                  )
-              }
+
+              (
+              <Link href={`/products/${product?.id}`}>
+                <p
+                  style={{
+                    fontSize: "15px",
+                    marginTop: "20px",
+                    backgroundColor: "black",
+                    color: "white",
+                    width: "100%",
+                    padding: "2px 5px ",
+                    fontWeight: "300",
+                    letterSpacing: "3px",
+                    textAlign: "center",
+                  }}
+                >
+                  More Info <ArrowRightOutlined />
+                </p>
+              </Link>
+              )
+
             </Card>
           </Col>
         ))}

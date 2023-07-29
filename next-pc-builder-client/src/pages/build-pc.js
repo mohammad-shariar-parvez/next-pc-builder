@@ -3,6 +3,8 @@ import React from 'react';
 import { Avatar, Button, List } from 'antd';
 import Link from 'next/link';
 import Image from 'next/image';
+import { useDispatch, useSelector } from 'react-redux';
+import { addToPcBuild } from '@/redux/pcBuildSlice';
 
 const data = [
 	{
@@ -32,6 +34,16 @@ const data = [
 
 ];
 const BuildPc = () => {
+	const pcBuild = useSelector((state) => state.pcBuild);
+	const dispatch = useDispatch();
+	console.log("STOREEEE22222222", pcBuild);
+
+	const removeItem = (title) => {
+		const pro = title.replace(/\s+/g, "");
+		dispatch(addToPcBuild({ [pro]: null }));
+
+	};
+
 	return (
 		<section>
 			<List
@@ -47,18 +59,62 @@ const BuildPc = () => {
 						<div style={{ display: "flex" }} >
 							<h4 >{item.title}</h4>
 						</div>
+						{
+
+							pcBuild[item.title.replace(/\s+/g, "")] && (
+								<div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+
+									<Image
+										src={pcBuild[item.title.replace(/\s+/g, "")].image}
+										alt="booked image"
+										width={100}
+										height={70}
+									/>
+									<div style={{ marginLeft: "10px" }}>
+										<p>{pcBuild[item.title.replace(/\s+/g, "")].productName}</p>
+										<p>{pcBuild[item.title.replace(/\s+/g, "")].price}</p>
+										<p>{pcBuild[item.title.replace(/\s+/g, "")].category}</p>
+									</div>
+
+								</div>
+
+							)
+						}
+						{
+							!pcBuild[item.title.replace(/\s+/g, "")] ? (<Link href={item.query}>
+								<Button type="primary" style={{
+									marginLeft: "15px",
+								}} ghost>BUILD PC</Button>
+
+							</Link>)
+								:
+								(
+
+									<Button onClick={() => removeItem(item.title)} type="primary" style={{
+										marginLeft: "15px",
+									}} ghost>Cancel</Button>
 
 
-						<Link href={item.query}>
-							<Button type="primary" style={{
-								marginLeft: "15px",
-							}} ghost>BUILD PC</Button>
+								)
+						}
 
-						</Link>
 					</List.Item>
 
 				)}
 			/>
+			{
+				Object.values(pcBuild).every((value) => value != null) ? (
+					<Button type="primary" block style={{ marginTop: "25px" }}>
+						Complete
+					</Button>
+				)
+					: (
+						<Button type="primary" disabled={true} block style={{ marginTop: "25px" }}>
+							Complete
+						</Button>
+					)
+			}
+
 		</section>
 	);
 };

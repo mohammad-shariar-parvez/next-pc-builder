@@ -5,14 +5,10 @@ import React from 'react';
 const CategoeisedProduct = ({ product }) => {
 	console.log("PRODUCT ID", product);
 	return (
-		<div style={{ padding: "20px" }}><h1>
-			This is Product catogory
-
+		<div style={{ padding: "20px" }}>
+			<h1>This is Product catogory</h1>
 			<AllProducts allProducts={product} />
-
-
-
-		</h1></div>
+		</div>
 	);
 };
 
