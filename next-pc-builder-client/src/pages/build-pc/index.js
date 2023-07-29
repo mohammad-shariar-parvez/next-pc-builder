@@ -1,35 +1,37 @@
-import RootLayout from '@/components/Layouts/RootLayout';
+
 import React from 'react';
 import { Avatar, Button, List } from 'antd';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useDispatch, useSelector } from 'react-redux';
-import { addToPcBuild } from '@/redux/pcBuildSlice';
+import { addToPcBuild, clearPcBuild } from '@/redux/pcBuildSlice';
+import RootLayout from '@/components/Layouts/RootLayout';
+
 
 const data = [
 	{
 		title: 'CPU',
-		query: '/choose/CPU'
+		query: '/build-pc/choose/CPU'
 	},
 	{
 		title: 'Motherboard',
-		query: '/choose/Motherboard'
+		query: '/build-pc/choose/Motherboard'
 	},
 	{
 		title: 'RAM',
-		query: '/choose/RAM'
+		query: '/build-pc/choose/RAM'
 	},
 	{
 		title: 'Power Supply Unit',
-		query: '/choose/Power Supply Unit'
+		query: '/build-pc/choose/Power Supply Unit'
 	},
 	{
 		title: 'Storage Device',
-		query: '/choose/Storage Device'
+		query: '/build-pc/choose/Storage Device'
 	},
 	{
 		title: 'Monitor',
-		query: '/choose/Monitor'
+		query: '/build-pc/choose/Monitor'
 	},
 
 ];
@@ -42,6 +44,11 @@ const BuildPc = () => {
 		const pro = title.replace(/\s+/g, "");
 		dispatch(addToPcBuild({ [pro]: null }));
 
+	};
+
+	const handleComplete = () => {
+		console.log("yoyoyo");
+		dispatch(clearPcBuild());
 	};
 
 	return (
@@ -104,7 +111,7 @@ const BuildPc = () => {
 			/>
 			{
 				Object.values(pcBuild).every((value) => value != null) ? (
-					<Button type="primary" block style={{ marginTop: "25px" }}>
+					<Button type="primary" onClick={handleComplete} block style={{ marginTop: "25px" }}>
 						Complete
 					</Button>
 				)
@@ -118,11 +125,11 @@ const BuildPc = () => {
 		</section>
 	);
 };
+export default BuildPc;
 
 BuildPc.getLayout = function getLayout(page) {
 	return <RootLayout>{page}</RootLayout>;
 };
-export default BuildPc;
 
 
 // export async function getServerSideProps() {
@@ -136,3 +143,13 @@ export default BuildPc;
 // 		},
 // 	};
 // }
+
+// import React from 'react';
+
+// const BuiltPageHOme = () => {
+// 	return (
+// 		<div>BuiltPageHOme</div>
+// 	);
+// };
+
+// export default BuiltPageHOme;

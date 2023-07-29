@@ -17,16 +17,22 @@ const pcBuildSlice = createSlice({
 	initialState,
 	reducers: {
 		addToPcBuild: (state, action) => {
-			console.log("ACTION US", action.payload);
-			console.log("ACTION output", { ...state, ...action.payload });
+			console.log(state);
 			// state = { ...state, ...action.payload };
 			Object.assign(state, action.payload);
 		},
 
+		clearPcBuild: (state, action) => {
+			console.log("CLEAR");
+			Object.assign(state, initialState);
+			// state = initialState;
+
+		}
+
 	},
 });
 
-export const { addToPcBuild } =
+export const { addToPcBuild, clearPcBuild } =
 	pcBuildSlice.actions;
 
 export default pcBuildSlice.reducer;

@@ -70,7 +70,7 @@ const items = [
 
 const RootLayout = ({ children }) => {
 	const { data: session } = useSession();
-	console.log("This is seeerpo", session);
+	// console.log("This is seeerpo", session);
 	return (
 		<Layout>
 			<Header
