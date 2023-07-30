@@ -13,10 +13,10 @@ import Link from "next/link";
 import { addToPcBuild } from "@/redux/pcBuildSlice";
 
 
-const AllProducts = ({ allProducts, category }) => {
+const AllProducts = ({ allProducts, category, limit = Number.POSITIVE_INFINITY }) => {
   const dispatch = useDispatch();
   const router = useRouter();
-  console.log("Category", category);
+
 
   const { Meta } = Card;
 
@@ -44,7 +44,7 @@ const AllProducts = ({ allProducts, category }) => {
         }]}
         justify="center"
       >
-        {allProducts?.slice(0, 6).map((product) => (
+        {allProducts?.slice(0, limit).map((product) => (
           <Col key={product.id} className="gutter-row" style={{ padding: "1px 16px" }}
             lg={{
               span: 8,
@@ -119,11 +119,7 @@ const AllProducts = ({ allProducts, category }) => {
 
               </p>
 
-              {/* <p style={{ fontSize: "15px" }}>
-                {product?.status.length > 100
-                  ? news?.description.slice(0, 70) + "..."
-                  : news?.description}
-              </p> */}
+
 
               {
                 category ? (<p

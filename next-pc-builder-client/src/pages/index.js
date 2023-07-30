@@ -28,7 +28,7 @@ const HomePage = ({ allProducts }) => {
         >
           TOP PRODUCTS
         </h1>
-        <AllProducts allProducts={allProducts} />
+        <AllProducts allProducts={allProducts} limit={6} />
         <Featured />
       </main>
     </>

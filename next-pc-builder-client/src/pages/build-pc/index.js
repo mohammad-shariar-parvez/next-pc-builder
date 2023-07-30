@@ -91,9 +91,9 @@ const BuildPc = () => {
 
 												/>
 												<div style={{ marginLeft: "10px" }}>
-													<p>{pcBuild[item.title.replace(/\s+/g, "")].productName}</p>
-													<p>{pcBuild[item.title.replace(/\s+/g, "")].price}</p>
-													<p>{pcBuild[item.title.replace(/\s+/g, "")].category}</p>
+													<p>{pcBuild[item.title.replace(/\s+/g, "")].productName.substring(0, 17)}...</p>
+													<p>{pcBuild[item.title.replace(/\s+/g, "")].price} Tk</p>
+													<p>{pcBuild[item.title.replace(/\s+/g, "")].category} </p>
 												</div>
 
 											</div>
@@ -159,5 +159,4 @@ export default BuildPc;
 BuildPc.getLayout = function getLayout(page) {
 	return <RootLayout>{page}</RootLayout>;
 };
-
 

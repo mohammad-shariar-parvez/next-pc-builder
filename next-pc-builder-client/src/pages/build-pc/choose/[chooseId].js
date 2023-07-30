@@ -35,7 +35,7 @@ ChooseProduct.getLayout = function getLayout(page) {
 
 export const getServerSideProps = async (context) => {
 	const { params } = context;
-	console.log("cONFUtION---------", params);
+
 
 	const res = await fetch(`https://next-pc-builder-server.vercel.app/api/v1/products/?&category=${params.chooseId}`);
 	const data = await res?.json();

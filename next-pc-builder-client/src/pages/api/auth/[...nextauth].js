@@ -17,9 +17,9 @@ export const authOptions = {
 		// ...add more providers here
 	],
 	//toshow own layout of login
-	// pages: {
-	// 	signIn: "https://next-pc-builder-client.vercel.app/login"
-	// }
+	pages: {
+		signIn: "/login"
+	}
 };
 
 export default NextAuth(authOptions);
