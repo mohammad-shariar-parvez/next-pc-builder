@@ -166,13 +166,13 @@ const RootLayout = ({ children }) => {
 					MSP PC BUILDER
 				</h2>
 				<p className={styles.social_icons}>
-					<Link href="https://web.facebook.com/groups/programmingherocommunity">
+					<Link href="https://web.facebook.com/thunder.tonmoy">
 						<FacebookFilled />
 					</Link>
-					<Link href="www.twitter.com">
+					<Link href="https://web.facebook.com/thunder.tonmoy">
 						<TwitterSquareFilled />
 					</Link>
-					<Link href="https://web.programming-hero.com/home/">
+					<Link href="https://google.com">
 						<GoogleSquareFilled />
 					</Link>
 					<Link href="www.linkedin.com">

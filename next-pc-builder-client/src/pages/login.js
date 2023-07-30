@@ -26,8 +26,8 @@ const LoginPage = () => {
       <div className={styles.form}  >
         <h3>LOGIN</h3>
         <div className={styles.social_icons} >
-          <GoogleOutlined onClick={() => signIn("google", { callbackUrl: router.query.callbackUrl || "http://localhost:3000/" })} />
-          <GithubOutlined onClick={() => signIn("github", { callbackUrl: router.query.callbackUrl || "http://localhost:3000/" })} />
+          <GoogleOutlined onClick={() => signIn("google", { callbackUrl: router.query.callbackUrl || "https://next-pc-builder-client.vercel.app/" })} />
+          <GithubOutlined onClick={() => signIn("github", { callbackUrl: router.query.callbackUrl || "https://next-pc-builder-client.vercel.app/" })} />
         </div>
       </div>
     </div>
