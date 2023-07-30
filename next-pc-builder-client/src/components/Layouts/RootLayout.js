@@ -76,12 +76,12 @@ const RootLayout = ({ children }) => {
 			<Header
 				style={{
 					display: "flex",
-					justifyContent: "space-between",
+					justifyContent: "space-evenly",
 					width: "100%",
 					position: "fixed",
 					top: "0",
 					zIndex: "999",
-					paddingLeft: "30px"
+					paddingLeft: "30px",
 
 				}}
 			>
@@ -97,7 +97,7 @@ const RootLayout = ({ children }) => {
 								whiteSpace: "nowrap"
 							}}
 						>
-							MSP PC
+							MSP
 						</Link>
 					</h2>
 				</div>
@@ -112,7 +112,7 @@ const RootLayout = ({ children }) => {
 						}}
 
 					>
-						<a style={{ fontSize: "16px" }} onClick={(e) => e.preventDefault()}>
+						<a onClick={(e) => e.preventDefault()}>
 							<Space>
 								Categories
 								<DownOutlined />
@@ -124,15 +124,15 @@ const RootLayout = ({ children }) => {
 					<Link href="/build-pc">
 						<Button style={{
 							marginLeft: "15px",
-							fontSize: "16px"
+
 						}} ghost>BUILD PC</Button>
 
 					</Link>
 					{!session?.user ? (<Link style={{ textDecoration: "none", color: "white", fontSize: "16px" }} href="/login">
 						<Button style={{
 							marginLeft: "15px",
-							fontSize: "16px"
-						}} onClick={() => signOut()} type="primary" ghost>
+
+						}} type="primary" ghost>
 							LOGIN
 						</Button>
 					</Link>)
@@ -190,7 +190,7 @@ const RootLayout = ({ children }) => {
 				</p>
 				MSP PC Builder ©2023 Created by MSP Web Solutions
 			</Footer>
-		</Layout>
+		</Layout >
 	);
 };
 export default RootLayout;

@@ -17,7 +17,7 @@ const ProductDetailPage = ({ product }) => {
 	return (
 
 		<div style={{ padding: "16px", maxWidth: "1300px", margin: "auto", }}>
-			<Row justify="center" style={{ marginTop: "80px", alignItems: "center", paddingTop: "0px", }} gutter={[{
+			<Row justify="center" style={{ marginTop: "20px", alignItems: "center", paddingTop: "0px", }} gutter={[{
 				xs: 8,
 				sm: 16,
 				md: 24,
@@ -91,11 +91,11 @@ const ProductDetailPage = ({ product }) => {
 						}}
 					>
 						<span>
-							PR: <StarOutlined /> {product?.individualRating}
+							Personal: <StarOutlined /> {product?.individualRating}
 						</span>
 
 						<span>
-							AR: <StarOutlined /> {product?.averageRating}
+							Average: <StarOutlined /> {product?.averageRating}
 						</span>
 					</p>
 					<div
@@ -146,7 +146,7 @@ const ProductDetailPage = ({ product }) => {
 								<List.Item>
 									<List.Item.Meta
 										avatar={<Avatar src={`https://xsgames.co/randomusers/avatar.php?g=pixel&key=${index}`} />}
-										title={<a href="https://ant.design">HEllo</a>}
+										title={<a href="https://ant.design">User</a>}
 										description={review}
 									/>
 								</List.Item>

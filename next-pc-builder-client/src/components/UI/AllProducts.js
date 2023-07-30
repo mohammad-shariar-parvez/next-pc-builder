@@ -3,6 +3,9 @@ import Image from "next/image";
 import {
   ArrowRightOutlined,
   CalendarOutlined,
+  StarOutlined,
+  MoneyCollectOutlined,
+  StockOutlined
 } from "@ant-design/icons";
 import Link from "next/link";
 
@@ -89,7 +92,7 @@ const AllProducts = ({ allProducts }) => {
                 }}
               >
                 <span>
-                  <CalendarOutlined /> {product?.price} BDT
+                  <MoneyCollectOutlined /> {product?.price} BDT
                 </span>
                 <span>
                   <CalendarOutlined /> {product?.category}
@@ -107,10 +110,10 @@ const AllProducts = ({ allProducts }) => {
                 }}
               >
                 <span>
-                  <CalendarOutlined /> {product?.status}
+                  <StockOutlined /> {product?.status}
                 </span>
                 <span>
-                  <CalendarOutlined /> {product?.averageRating}
+                  <StarOutlined /> {product?.averageRating}
                 </span>
 
               </p>

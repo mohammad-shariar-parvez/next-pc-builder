@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Avatar, Button, List } from 'antd';
+import { Avatar, Button, Col, List, Row } from 'antd';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useDispatch, useSelector } from 'react-redux';
@@ -52,63 +52,81 @@ const BuildPc = () => {
 	};
 
 	return (
-		<section>
+		<section style={{ padding: "16px", maxWidth: "1300px", margin: "auto", overflowX: "hidden" }}>
 			<List
 				itemLayout="horizontal"
 				dataSource={data}
 				renderItem={(item, index) => (
 					<List.Item >
-						{/* <List.Item.Meta
-							avatar={<Avatar src={`https://xsgames.co/randomusers/avatar.php?g=pixel&key=${index}`} />}
-							title={<a href="https://ant.design">{item.title}</a>}
-						// description="Ant Design, a design language for background applications, is refined by Ant UED Team"
-						/> */}
-						<div style={{ display: "flex" }} >
-							<h4 >{item.title}</h4>
-						</div>
-						{
 
-							pcBuild[item.title.replace(/\s+/g, "")] && (
-								<div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+						<Row align="top" gutter={[8, 8]} style={{ width: "100%" }}>
+							<Col xs={5} sm={5} md={5} lg={8} xl={8}>
 
-									<Image
-										src={pcBuild[item.title.replace(/\s+/g, "")].image}
-										alt="booked image"
-										width={100}
-										height={70}
-									/>
-									<div style={{ marginLeft: "10px" }}>
-										<p>{pcBuild[item.title.replace(/\s+/g, "")].productName}</p>
-										<p>{pcBuild[item.title.replace(/\s+/g, "")].price}</p>
-										<p>{pcBuild[item.title.replace(/\s+/g, "")].category}</p>
-									</div>
-
+								<div style={{ display: "flex" }} >
+									<h4 >{item.title}</h4>
 								</div>
 
-							)
-						}
-						{
-							!pcBuild[item.title.replace(/\s+/g, "")] ? (<Link href={item.query}>
-								<Button type="primary" style={{
-									marginLeft: "15px",
-								}} ghost>BUILD PC</Button>
-
-							</Link>)
-								:
-								(
-
-									<Button onClick={() => removeItem(item.title)} type="primary" style={{
-										marginLeft: "15px",
-									}} ghost>Cancel</Button>
+							</Col>
+							<Col xs={13} sm={13} md={13} lg={13} xl={13}>
+								{
 
 
-								)
-						}
+									pcBuild[item.title.replace(/\s+/g, "")] && (
+										<Col xs={2} sm={4} md={6} lg={10} xl={10}>
+											<div style={{ display: "flex", alignItems: "start", width: "100vh" }}>
+
+												<Image
+													src={pcBuild[item.title.replace(/\s+/g, "")].image}
+													alt="booked image"
+													width={80}
+													height={65}
+
+												/>
+												<div style={{ marginLeft: "10px" }}>
+													<p>{pcBuild[item.title.replace(/\s+/g, "")].productName}</p>
+													<p>{pcBuild[item.title.replace(/\s+/g, "")].price}</p>
+													<p>{pcBuild[item.title.replace(/\s+/g, "")].category}</p>
+												</div>
+
+											</div>
+										</Col>
+
+									)
+								}
+							</Col>
+							<Col xs={1} sm={1} md={1} lg={2} xl={2}>
+								{
+									!pcBuild[item.title.replace(/\s+/g, "")] ? (<div>
+										<Link href={item.query}>
+											<Button type="primary" style={{
+												marginLeft: "15px",
+											}} ghost>BUILD PC</Button>
+
+										</Link>
+									</div>)
+										:
+										(
+
+											<div>
+												<Button onClick={() => removeItem(item.title)} type="primary" style={{
+													marginLeft: "15px",
+												}} ghost>Cancel</Button>
+											</div>
+
+
+										)
+								}
+							</Col>
+
+						</Row>
 
 					</List.Item>
 
+
 				)}
+
 			/>
+
 			{
 				Object.values(pcBuild).every((value) => value != null) ? (
 					<Button type="primary" onClick={handleComplete} block style={{ marginTop: "25px" }}>
@@ -121,7 +139,6 @@ const BuildPc = () => {
 						</Button>
 					)
 			}
-
 		</section>
 	);
 };
