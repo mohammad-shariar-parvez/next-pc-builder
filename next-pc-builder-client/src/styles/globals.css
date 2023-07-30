@@ -18,3 +18,31 @@
 
   text-align: center ;
 }
+
+
+@media (min-width: 768px) {
+  .your-banner-class {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    padding-left: 30px;
+    /* Add any other styles for large devices here */
+  }
+}
+
+/* For small devices (screen width < 768px) */
+@media (max-width: 767px) {
+  .your-banner-class {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    padding-left: 30px;
+    /* Add any other styles for small devices here */
+  }
+}

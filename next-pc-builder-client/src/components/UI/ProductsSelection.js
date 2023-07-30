@@ -10,27 +10,18 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { useDispatch, useSelector } from "react-redux";
 import { addToPcBuild } from "@/redux/pcBuildSlice";
-import { useEffect } from "react";
+
 
 const ProductsSelection = ({ allProducts }) => {
-	const { PowerSupplyUnit } = useSelector((state) => state.pcBuild);
 	const dispatch = useDispatch();
-	// console.log("STOREEEE11111111", PowerSupplyUnit);
-
 	const router = useRouter();
 	const { Meta } = Card;
-
-	// useEffect(() => {
-	// 	console.log(PowerSupplyUnit);
-	// }, [PowerSupplyUnit]);
 
 
 	const addPcHandler = (product) => {
 		const pro = product.category.replace(/\s+/g, "");
-		// console.log("SINGLE PRODUCT", { [pro]: product.category });
 		dispatch(addToPcBuild({ [pro]: product }));
 		router.push(`/build-pc`);
-
 	};
 
 	return (
@@ -42,7 +33,7 @@ const ProductsSelection = ({ allProducts }) => {
 					margin: "30px 0px",
 				}}
 			>
-				#TODAY HIGHLIGHT
+
 			</h1>
 			<Row
 				gutter={[{

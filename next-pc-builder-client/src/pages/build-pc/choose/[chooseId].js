@@ -6,9 +6,9 @@ import React from 'react';
 const ChooseProduct = ({ product }) => {
 	console.log("PRODUCT ID", product);
 	return (
-		<div style={{ padding: "20px" }}>
-			This is Product CHOOOOSE
-			<ProductsSelection allProducts={product} />
+		<div >
+			{/* <ProductsSelection allProducts={product} /> */}
+			<AllProducts allProducts={product} category />
 		</div>
 	);
 };

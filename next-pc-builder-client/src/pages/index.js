@@ -35,7 +35,7 @@ HomePage.getLayout = function getLayout(page) {
 
 export const getStaticProps = async () => {
   // const res = await fetch("http://localhost:3000/api/news"); 
-  const res = await fetch("http://localhost:5001/api/v1/products/");
+  const res = await fetch("https://next-pc-builder-server.vercel.app/api/v1/products/");
   const data = await res.json();
   // console.log("DATAAA", data);
   return {

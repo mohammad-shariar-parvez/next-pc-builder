@@ -7,15 +7,24 @@ import {
   MoneyCollectOutlined,
   StockOutlined
 } from "@ant-design/icons";
+import { useRouter } from "next/router";
+import { useDispatch } from "react-redux";
 import Link from "next/link";
+import { addToPcBuild } from "@/redux/pcBuildSlice";
 
 
-const AllProducts = ({ allProducts }) => {
-
+const AllProducts = ({ allProducts, category }) => {
+  const dispatch = useDispatch();
+  const router = useRouter();
+  console.log("Category", category);
 
   const { Meta } = Card;
 
-
+  const addPcHandler = (product) => {
+    const pro = product.category.replace(/\s+/g, "");
+    dispatch(addToPcBuild({ [pro]: product }));
+    router.push(`/build-pc`);
+  };
 
 
   return (
@@ -124,10 +133,9 @@ const AllProducts = ({ allProducts }) => {
                   : news?.description}
               </p> */}
 
-
-
-              <Link href={`/products/${product?.id}`}>
-                <p
+              {
+                category ? (<p
+                  onClick={() => addPcHandler(product)}
                   style={{
                     fontSize: "15px",
                     marginTop: "20px",
@@ -140,9 +148,29 @@ const AllProducts = ({ allProducts }) => {
                     textAlign: "center",
                   }}
                 >
-                  More Info <ArrowRightOutlined />
-                </p>
-              </Link>
+                  ADD <ArrowRightOutlined />
+                </p>)
+                  :
+                  (<Link href={`/products/${product?.id}`}>
+                    <p
+                      style={{
+                        fontSize: "15px",
+                        marginTop: "20px",
+                        backgroundColor: "black",
+                        color: "white",
+                        width: "100%",
+                        padding: "2px 5px ",
+                        fontWeight: "300",
+                        letterSpacing: "3px",
+                        textAlign: "center",
+                      }}
+                    >
+                      More Info <ArrowRightOutlined />
+                    </p>
+                  </Link>)
+              }
+
+
 
 
             </Card>

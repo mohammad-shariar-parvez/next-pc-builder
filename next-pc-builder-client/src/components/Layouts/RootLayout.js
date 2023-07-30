@@ -74,16 +74,7 @@ const RootLayout = ({ children }) => {
 	return (
 		<Layout>
 			<Header
-				style={{
-					display: "flex",
-					justifyContent: "space-evenly",
-					width: "100%",
-					position: "fixed",
-					top: "0",
-					zIndex: "999",
-					paddingLeft: "30px",
-
-				}}
+				className="your-banner-class"
 			>
 				<div className="brand-logo">
 					<h2>

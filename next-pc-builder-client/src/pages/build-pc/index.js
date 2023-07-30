@@ -38,7 +38,7 @@ const data = [
 const BuildPc = () => {
 	const pcBuild = useSelector((state) => state.pcBuild);
 	const dispatch = useDispatch();
-	console.log("STOREEEE22222222", pcBuild);
+
 
 	const removeItem = (title) => {
 		const pro = title.replace(/\s+/g, "");
@@ -110,7 +110,7 @@ const BuildPc = () => {
 											<div>
 												<Button onClick={() => removeItem(item.title)} type="primary" style={{
 													marginLeft: "15px",
-												}} ghost>Cancel</Button>
+												}} danger ghost>Cancel</Button>
 											</div>
 
 
