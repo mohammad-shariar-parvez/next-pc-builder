@@ -1,4 +1,4 @@
-# MSP Pc Builder
+# MSP PC Builder
 
 This project's live site: https://next-pc-builder-client.vercel.app/
 
