@@ -8,6 +8,7 @@ const ChooseProduct = ({ product }) => {
 	return (
 		<div >
 			{/* <ProductsSelection allProducts={product} /> */}
+
 			<AllProducts allProducts={product} category />
 		</div>
 	);
@@ -34,9 +35,9 @@ ChooseProduct.getLayout = function getLayout(page) {
 
 export const getServerSideProps = async (context) => {
 	const { params } = context;
-	console.log("cONFURION---------", params);
+	console.log("cONFUtION---------", params);
 
-	const res = await fetch(`http://localhost:5001/api/v1/products/?&category=${params.chooseId}`);
+	const res = await fetch(`https://next-pc-builder-server.vercel.app/api/v1/products/?&category=${params.chooseId}`);
 	const data = await res?.json();
 	return {
 		props: {

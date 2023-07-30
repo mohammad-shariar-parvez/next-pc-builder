@@ -19,6 +19,15 @@ const HomePage = ({ allProducts }) => {
       </Head>
       <main >
         <Banner />
+        <h1
+          style={{
+            textAlign: "center",
+            fontSize: "50px",
+            margin: "30px 0px",
+          }}
+        >
+          TOP PRODUCTS
+        </h1>
         <AllProducts allProducts={allProducts} />
         <Featured />
       </main>

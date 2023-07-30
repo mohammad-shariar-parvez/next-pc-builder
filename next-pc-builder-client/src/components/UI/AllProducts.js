@@ -29,15 +29,7 @@ const AllProducts = ({ allProducts, category }) => {
 
   return (
     <section style={{ maxWidth: "1250px", margin: "auto", paddingTop: "30px" }}>
-      <h1
-        style={{
-          textAlign: "center",
-          fontSize: "50px",
-          margin: "30px 0px",
-        }}
-      >
-        TOP PRODUCTS
-      </h1>
+
       <Row
         gutter={[{
           xs: 8,

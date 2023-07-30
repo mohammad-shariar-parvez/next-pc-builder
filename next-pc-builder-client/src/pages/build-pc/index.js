@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Avatar, Button, Col, List, Row } from 'antd';
+import { Avatar, Button, Col, List, Row, notification } from 'antd';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useDispatch, useSelector } from 'react-redux';
@@ -36,9 +36,16 @@ const data = [
 
 ];
 const BuildPc = () => {
+	const [api, contextHolder] = notification.useNotification();
 	const pcBuild = useSelector((state) => state.pcBuild);
 	const dispatch = useDispatch();
 
+	const openNotificationWithIcon = (type) => {
+		api[type]({
+			message: 'PC Built Sucessfully'
+
+		});
+	};
 
 	const removeItem = (title) => {
 		const pro = title.replace(/\s+/g, "");
@@ -47,12 +54,13 @@ const BuildPc = () => {
 	};
 
 	const handleComplete = () => {
-		console.log("yoyoyo");
 		dispatch(clearPcBuild());
+		openNotificationWithIcon('success');
 	};
 
 	return (
 		<section style={{ padding: "16px", maxWidth: "1300px", margin: "auto", overflowX: "hidden" }}>
+			{contextHolder}
 			<List
 				itemLayout="horizontal"
 				dataSource={data}
@@ -129,9 +137,13 @@ const BuildPc = () => {
 
 			{
 				Object.values(pcBuild).every((value) => value != null) ? (
-					<Button type="primary" onClick={handleComplete} block style={{ marginTop: "25px" }}>
-						Complete
-					</Button>
+					<>
+
+						<Button type="primary" onClick={handleComplete} block style={{ marginTop: "25px" }}>
+							Complete
+						</Button>
+					</>
+
 				)
 					: (
 						<Button type="primary" disabled={true} block style={{ marginTop: "25px" }}>
@@ -149,24 +161,3 @@ BuildPc.getLayout = function getLayout(page) {
 };
 
 
-// export async function getServerSideProps() {
-// 	// Here you can initialize an empty initial state if needed,
-// 	// or any other data you want to pass to the page props.
-// 	const initialState = {};
-
-// 	return {
-// 		props: {
-// 			initialState,
-// 		},
-// 	};
-// }
-
-// import React from 'react';
-
-// const BuiltPageHOme = () => {
-// 	return (
-// 		<div>BuiltPageHOme</div>
-// 	);
-// };
-
-// export default BuiltPageHOme;

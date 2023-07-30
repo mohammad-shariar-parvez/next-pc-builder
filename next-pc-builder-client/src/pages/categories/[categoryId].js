@@ -6,7 +6,7 @@ const CategoeisedProduct = ({ product }) => {
 	console.log("PRODUCT ID", product);
 	return (
 		<div style={{ padding: "20px" }}>
-			<h1>This is Product catogory</h1>
+
 			<AllProducts allProducts={product} />
 		</div>
 	);
@@ -20,7 +20,7 @@ CategoeisedProduct.getLayout = function getLayout(page) {
 
 
 export const getStaticPaths = async () => {
-	const res = await fetch("http://localhost:5001/api/v1/products/");
+	const res = await fetch("https://next-pc-builder-server.vercel.app/api/v1/products/");
 	const products = await res.json();
 	// console.log("PPAATTHH IS ----", products);
 	const paths = products?.data?.map((product) => ({
@@ -35,7 +35,7 @@ export const getStaticProps = async (context) => {
 	const { params } = context;
 	// console.log("cONFURION---------", params);
 
-	const res = await fetch(`http://localhost:5001/api/v1/products/?&category=${params.categoryId}`);
+	const res = await fetch(`https://next-pc-builder-server.vercel.app/api/v1/products/?&category=${params.categoryId}`);
 	const data = await res?.json();
 	return {
 		props: {
