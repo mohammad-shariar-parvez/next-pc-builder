@@ -12,16 +12,7 @@ export type IProduct = {
   status: ProductStatus;
   price: number;
   description: string;
-  keyFeatures: {
-    brand: string;
-    model: string;
-    specification: string;
-    port: string;
-    type: string;
-    resolution: string;
-    voltage: string;
-    // Add more key features as needed
-  };
+  keyFeatures: Record<string, string>;
   individualRating: number;
   averageRating: number;
   reviews: string[];

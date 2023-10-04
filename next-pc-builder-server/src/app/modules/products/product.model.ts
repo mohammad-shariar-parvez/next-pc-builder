@@ -19,13 +19,8 @@ const productSchema = new Schema<IProduct, ProductModel>(
     price: { type: Number, required: true },
     description: { type: String, required: true },
     keyFeatures: {
-      brand: { type: String, required: true },
-      model: { type: String, required: true },
-      specification: { type: String, required: true },
-      port: { type: String, required: true },
-      type: { type: String, required: true },
-      resolution: { type: String, required: true },
-      voltage: { type: String, required: true },
+      type: Schema.Types.Mixed,
+      required: true,
       // Add more key features as needed
     },
     individualRating: { type: Number, required: true },
